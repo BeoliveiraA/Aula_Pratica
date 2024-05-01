@@ -1,39 +1,23 @@
 import java.util.Scanner;
 
-public class Aluno{
+public class Aluno extends Usuario{
 
-    String nome;
-    int idade;
     int ra;
-    String email;
     String telefone;
+    Scanner sc = new Scanner(System.in);
 
-    public String identificarAluno(String usuario){
-        
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Digite o seu nome");
-        nome = scanner.nextLine();
-
-        System.out.println("Digite a sua idade");
-        idade = scanner.nextInt();
-        scanner.nextLine();
-
+    @Override
+    public void identificarUsuario(){
+    super.identificarUsuario();
+    
         System.out.println("Digite a seu ra");
-        ra = scanner.nextInt();
-        scanner.nextLine();
-
-        System.out.println("Digite o seu email");
-        email = scanner.nextLine();
+        ra = sc.nextInt();
+        sc.nextLine();
 
         System.out.println("Digite o seu telefone");
-        telefone = scanner.nextLine();
+        telefone = sc.nextLine();
 
-        System.out.println("Seja bem vindo " + usuario + nome);
+        sc.close();
 
-        scanner.close();
-
-        return usuario;
     }
-    
-
 }
