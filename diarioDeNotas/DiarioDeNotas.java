@@ -9,11 +9,13 @@ public class DiarioDeNotas{
          if(usuario1.equalsIgnoreCase("Professor")){
          Professor professor = new Professor();
          professor.identificarUsuario();
+         professor.visualizarNotas();
 
          }else if(usuario1.equalsIgnoreCase("Aluno")){
             Aluno aluno = new Aluno();
             aluno.identificarUsuario();
-
+            aluno.visualizarNotas();
+            
          }else{
             System.out.println("Opção invalida ");
 
